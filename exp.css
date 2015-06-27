@@ -1,0 +1,194 @@
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Condensed);
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,700);
+
+* {
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+            backface-visibility: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+#body {
+    top: 0;
+    left: 0;
+    position: absolute;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    background-image: url("owl.jpg");
+}
+
+#top {
+    height: 25%;
+    width: 90%;
+    left: 5%;
+    font-family: 'Indie Flower';
+    top: -20px;
+    font-size: 150px;
+    color: snow;
+    position: relative;
+}
+
+#mini-header {
+    height: 60%;
+    line-height: 60%;
+    position: relative;
+    background-image: radial-gradient(circle at right, rgba(206, 246, 245, 0.5), rgba(255,255,255, 0.1));
+}
+
+#img1 {
+    position: relative;
+    height: 100%;
+    width: 50%;
+}
+
+#piano {
+    border-radius: 100%;
+    position: relative;
+    top: 7.5%;
+    left: 22.5%;
+    height: 85%;
+    width: 55%;
+    box-shadow: 2px 20px 150px gray;
+}
+
+#intro {
+    position: relative;
+    display: inline-block;
+    float: right;
+    bottom: 100%;
+    width: 60%;
+    font-family: 'Merriweather';
+    text-align: center;
+    font-size: 36px;
+    color: snow;
+}
+
+ul {
+    margin: 0;
+    float: right;
+    display: inline-block;
+    position: relative;
+}
+
+li {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-image: radial-gradient(circle at right, rgba(217, 213, 249, 0.8), rgba(0, 0, 0, 0));
+    width: 55%;
+    font-size: 40px;
+    float: right;
+    list-style: none;
+    display: inline-block;
+    text-align: right;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+li:hover {
+    cursor: pointer;
+    border-top-left-radius: 100%;
+    opacity: 1;
+    box-shadow: 250px 5px 15px rgba(255, 255, 255, 1);
+    transform: translateX(-5px);
+    -webkit-transform: translateX(-5px);
+}
+
+#about {
+    height: 60%;
+    margin-top: 25px;
+    line-height: 60%;
+    position: relative;
+    background-image: radial-gradient(circle at right, rgba(255,255,255, 0.1), rgba(0, 0, 0, 0.5));
+}
+
+#loading {
+    height: 50px;
+    border-radius: 100%;
+    border:25px solid rgba(255, 255, 255, 0);
+    margin: 0 auto;
+    text-align: center;
+    top: -50px;
+    width: 50px;
+}
+
+#miniload {
+    height: 45px;
+    width: 45px;
+    top: 2px;
+    right: -2px;
+    border-radius: 100%;
+    box-shadow: 0 0 80px white;
+    position: relative;
+    background-color: rgba(243, 91, 129, 1);
+}
+
+#loading2 {
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 100%;
+    border:25px solid rgba(255, 255, 255, 0);
+    border-bottom:25px solid rgba(203, 27, 71, 1);
+    border-top:25px solid rgba(203, 27, 71, 1);
+    box-shadow: 0 0 80px white;
+    top:-125px;
+    text-align: center;
+    width: 100px;
+    animation: spin 0.75s linear infinite;
+    -webkit-animation:spin 0.75s linear infinite;
+    -moz-animation: spin 0.75s linear infinite;
+    -o-animation: spin 0.75s linear infinite;
+}
+
+#copyright {
+    padding: 20px;
+    left: 5%;
+    width: 90%;
+    position: absolute;
+    font-family: 'Indie Flower', cursive, bold;
+    font-size: 20px;
+    color: aliceblue;
+    text-align: center;
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    } 100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    } 100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    } 100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    } 100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
