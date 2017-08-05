@@ -78,7 +78,7 @@ $(document).ready(function() {
         
         // rotate image after scrolling past #about section
         if ($(this).scrollTop() >= $about.offset().top - $navbar.height()) {
-            $me.addClass("rotate");
+            $me.addClass("rotate5");
         }
     });
 });

@@ -323,7 +323,7 @@ html, body {
     letter-spacing: 10px;
 }
 
-.rotate {
+.rotate5 {
     transform: rotate(-5deg);
     -webkit-transform: rotate(-5deg);
     -ms-transform: rotate(-5deg);
