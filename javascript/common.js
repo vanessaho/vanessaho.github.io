@@ -8,13 +8,15 @@ $(document).ready(function() {
     var $owl = $(".owl");
     var $about = $("#about");
     var $navp = $(".navp");
+    var $third = $(".third");
+    var $wrapper = $(".wrapper");
+    var $skills = $("#skills");
     
     $navp.click(function() {
         var $offset = "#" + lowercase($(this).text());
         $('html, body').animate({  
             scrollTop: $($offset).offset().top
         }, 500);
-        console.log($offset);
     });
     
     $find.click(function() {
@@ -36,6 +38,7 @@ $(document).ready(function() {
         var $owl = $(".owl img");
         var $section = $(".section");
         if ($(this).scrollTop() > $section.height() - $navbar.height()) {
+            $('html, body').css("overflow-y", "auto");
             $(".owl").addClass("opacity");
             $nav.addClass("opacity");
             $nav.addClass("color");
@@ -46,5 +49,16 @@ $(document).ready(function() {
             $nav.removeClass("color");
             $(".owl img").attr("src", "./img/owl.png");
         }
-    })
+        
+        $wrapper.each(function(i) {
+            // middle of window
+            var window_pos = $(window).scrollTop() + ($(window).height() / 2);
+            // top of element
+            var top_wrapper = $(this).offset().top;
+
+            if (top_wrapper <= window_pos) {
+                $(this).animate({'opacity':'1'}, 1000*i);
+            }
+        });
+    });
 });
