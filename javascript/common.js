@@ -12,6 +12,10 @@ $(document).ready(function() {
     var $wrapper = $(".wrapper");
     var $skills = $("#skills");
     
+    if ($(window).scrollTop() >= $section.height() - $navbar.height()) {
+        $('html, body').css("overflow-y", "auto");
+    };
+    
     $navp.click(function() {
         var $offset = "#" + lowercase($(this).text());
         $('html, body').animate({  
