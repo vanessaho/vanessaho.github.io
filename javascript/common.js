@@ -11,6 +11,8 @@ $(document).ready(function() {
     var $third = $(".third");
     var $wrapper = $(".wrapper");
     var $skills = $("#skills");
+    var $section = $(".section");
+    var $navbar = $("#navbar");
     
     if ($(window).scrollTop() >= $section.height() - $navbar.height()) {
         $('html, body').css("overflow-y", "auto");
@@ -38,9 +40,7 @@ $(document).ready(function() {
     
     $(window).scroll(function() {
         var $nav = $(".navp");
-        var $navbar = $("#navbar");
         var $owl = $(".owl img");
-        var $section = $(".section");
         if ($(this).scrollTop() > $section.height() - $navbar.height()) {
             $('html, body').css("overflow-y", "auto");
             $(".owl").addClass("opacity");
