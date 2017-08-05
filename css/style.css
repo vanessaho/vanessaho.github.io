@@ -239,7 +239,6 @@ html, body {
 
 #aright div {
     text-align: justify;
-    padding: 2em;
 }
 
 #aright div p {
@@ -308,12 +307,14 @@ html, body {
 }
 
 #projects {
-    background-color: rgba(7, 16, 64, 0.5);
+    background: radial-gradient(ellipse at top, #2A2F49 0%, #03092B 100%);
 }
 
-#projects h1 {
+#projects .section h1 {
     padding: 2em;
     text-align: center;
+    color: white;
+    letter-spacing: 10px;
 }
 
 #contact {
