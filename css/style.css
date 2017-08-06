@@ -209,11 +209,11 @@ html, body {
     left: 0;
     right: 0;
     box-shadow: 2px 2px 10px black;
-    transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
+    transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
 }
 
 #aright {
@@ -248,7 +248,7 @@ html, body {
 
 #aright div p {
     padding-bottom: 10px;
-    padding-left: 5px;
+    padding-left: 10px;
 }
 
 #skills {
@@ -313,7 +313,7 @@ html, body {
 }
 
 #projects {
-    background: radial-gradient(ellipse at top, #2A2F49 0%, #03092B 100%);
+    background: radial-gradient(ellipse at top, #323440 0%, #0D1022 100%);
 }
 
 #projects .section h1 {
@@ -331,9 +331,99 @@ html, body {
     -o-transform: rotate(-5deg);
 }
 
+.pdiv {
+    float: left;
+    position: relative;
+    margin: auto;
+    height: 50%;
+    width: 20vw;
+}
+
+.plist {
+    height: 70%;
+    width: 100%;
+    color: white;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: table;
+    vertical-align: middle;
+}
+
+.plist li {
+    float: right;
+    width: 60%;
+    text-align: right;
+    vertical-align: middle;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-right: 1em;
+    letter-spacing: 5px;
+}
+
+.plist li:hover {
+    cursor: pointer;
+    text-decoration: line-through;
+}
+
+.pclicked {
+    text-decoration: line-through;
+    font-style: oblique;
+}
+
+.pwrapper {
+    float: right;
+    position: relative;
+    width: 79.99vw;
+    height: 70%;
+}
+
+.project {
+    height: 100%;
+    width: 100%;
+    float: left;
+    position: absolute;  
+}
+
+.pdesc {
+    float: left;
+    width: 34.5%;
+    height: 100%;
+    font-family: 'IM Fell English', serif;
+    color: white;
+    text-align: center;
+}
+
+.pdesc h3 {
+
+
+}
+
+.imgdiv {
+    position: relative;
+    float: right;
+    height: 100%;
+    width: 65%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+.imgdiv img {
+    position: absolute;
+    width: 95%;
+    height: auto;
+    top: 0;
+    left: 0;
+    margin: auto;
+}
+
 #contact {
-    height: 100px;
-    background-color: aqua;
+    height: 200px;
+    background-color: lightgray;
 }
 
 /* KEYFRAMES HERE */

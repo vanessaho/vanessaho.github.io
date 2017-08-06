@@ -15,6 +15,8 @@ $(document).ready(function() {
     var $skills = $("#skills");
     var $section = $(".section");
     var $navbar = $("#navbar");
+    var $pitem = $(".plist li");
+    var $active = $pitem.first();
     
     // so that if the window refreshes in middle of page the user isn't stuck there
     if ($(window).scrollTop() >= $section.height() - $navbar.height()) {
@@ -36,6 +38,14 @@ $(document).ready(function() {
         }, 500);
     });
     
+    $pitem.click(function() {
+        if ($(this).text() != $active.text()) {
+            $(this).addClass("pclicked");
+            $active.removeClass("pclicked");
+            $active = $(this);
+        }
+    })
+    
     // click on owl icon on top
     $owl.click(function() {
         var $opening = $("#opening");
@@ -43,6 +53,7 @@ $(document).ready(function() {
             scrollTop: $opening.offset().top
         }, 500);
     });
+    
     
     // scrolling functions
     $(window).scroll(function() {
