@@ -1,6 +1,6 @@
-// function for lowercasing the first letter of a string
+// function for making entire string lowercase
 function lowercase(string) {
-    return string.substr(0,1).toLowerCase() + string.substr(1);
+    return string.toLowerCase();
 }
 
 
@@ -16,7 +16,9 @@ $(document).ready(function() {
     var $section = $(".section");
     var $navbar = $("#navbar");
     var $pitem = $(".plist li");
-    var $active = $pitem.first();
+    var $witem = $(".wlist li");
+    var $activep = $pitem.first();
+    var $activew = $witem.first();
     
     // so that if the window refreshes in middle of page the user isn't stuck there
     if ($(window).scrollTop() >= $section.height() - $navbar.height()) {
@@ -38,11 +40,36 @@ $(document).ready(function() {
         }, 500);
     });
     
+    // set up programming projects
+    var $pwrapper = $(".pwrapper");
+    $pwrapper.first().css("display", "block");
     $pitem.click(function() {
-        if ($(this).text() != $active.text()) {
-            $(this).addClass("pclicked");
-            $active.removeClass("pclicked");
-            $active = $(this);
+        if ($(this).text() != $activep.text()) {
+            $(this).addClass("prclicked");
+            $activep.removeClass("prclicked");
+            var prev = "#" + lowercase($activep.text());
+            $(prev).css("display", "none");
+            //$(prev).css("z-index", 1);
+            $activep = $(this);
+            var proj = "#" + lowercase($(this).text());
+            $(proj).css("display", "block");
+            //$(project).css("z-index", 99);
+        }
+    });
+    
+    var $wwrapper = $(".wwrapper");
+    $wwrapper.first().css("display", "block");
+    $witem.click(function() {
+        if ($(this).text() != $activew.text()) {
+            $(this).addClass("prclicked");
+            $activew.removeClass("prclicked");
+            var prev = "#" + lowercase($activew.text());
+            $(prev).css("display", "none");
+            //$(prev).css("z-index", 1);
+            $activew = $(this);
+            var proj = "#" + lowercase($(this).text());
+            $(proj).css("display", "block");
+            //$(project).css("z-index", 99);
         }
     })
     

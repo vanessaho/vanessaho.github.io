@@ -331,7 +331,7 @@ html, body {
     -o-transform: rotate(-5deg);
 }
 
-.pdiv {
+.pdiv, .wdiv {
     float: left;
     position: relative;
     margin: auto;
@@ -339,7 +339,7 @@ html, body {
     width: 20vw;
 }
 
-.plist {
+.plist,  .wlist{
     height: 70%;
     width: 100%;
     color: white;
@@ -350,7 +350,7 @@ html, body {
     vertical-align: middle;
 }
 
-.plist li {
+.plist li, .wlist li {
     float: right;
     width: 60%;
     text-align: right;
@@ -359,23 +359,26 @@ html, body {
     padding-bottom: 2em;
     padding-right: 1em;
     letter-spacing: 5px;
+    transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
 }
 
-.plist li:hover {
+.plist li:hover, .prclicked, .wlist li:hover {
     cursor: pointer;
+    color: black;
     text-decoration: line-through;
 }
 
-.pclicked {
-    text-decoration: line-through;
-    font-style: oblique;
-}
-
-.pwrapper {
+.pwrapper, .wwrapper {
     float: right;
-    position: relative;
+    right: 0;
+    position: absolute;
     width: 79.99vw;
     height: 70%;
+    display: none;
 }
 
 .project {
@@ -385,18 +388,22 @@ html, body {
     position: absolute;  
 }
 
-.pdesc {
+.project a {
+    color: white;
+    text-decoration: none;
+}
+
+.project a:hover {
+    text-decoration: line-through;
+}
+
+.pdesc, .wdesc {
     float: left;
     width: 34.5%;
     height: 100%;
     font-family: 'IM Fell English', serif;
     color: white;
     text-align: center;
-}
-
-.pdesc h3 {
-
-
 }
 
 .imgdiv {
@@ -414,10 +421,11 @@ html, body {
 
 .imgdiv img {
     position: absolute;
-    width: 95%;
-    height: auto;
+    max-width: 90%;
+    max-height: 100%;
     top: 0;
     left: 0;
+    right: 0;
     margin: auto;
 }
 
