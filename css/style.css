@@ -89,6 +89,7 @@ html, body {
 
 #opening {
     background: radial-gradient(ellipse at bottom, #151C42 0%, black 100%);
+    background-attachment: fixed;
     overflow: hidden;
     color: white;
 }
@@ -186,8 +187,9 @@ html, body {
 }
 
 #about {
-    background-color: whitesmoke;
+    background: whitesmoke;
     overflow: hidden;
+    background-attachment: fixed;
 }
 
 #aleft {
@@ -253,6 +255,7 @@ html, body {
 
 #skills {
     background: whitesmoke;
+    background-attachment: fixed;
     padding: 2em;
     text-align: center;
     overflow: hidden;
@@ -314,6 +317,7 @@ html, body {
 
 #projects {
     background: radial-gradient(ellipse at top, #323440 0%, #0D1022 100%);
+    background-attachment: fixed;
 }
 
 #projects .section h1 {
@@ -332,11 +336,20 @@ html, body {
 }
 
 .pdiv, .wdiv {
-    float: left;
     position: relative;
     margin: auto;
     height: 50%;
     width: 20vw;
+}
+
+.pdiv {
+    float: left;
+    margin-right: 10px;
+}
+
+.wdiv {
+    float: right;
+    margin-left: 10px;
 }
 
 .plist,  .wlist{
@@ -353,7 +366,6 @@ html, body {
 .plist li, .wlist li {
     float: right;
     width: 60%;
-    text-align: right;
     vertical-align: middle;
     padding-top: 2em;
     padding-bottom: 2em;
@@ -366,6 +378,16 @@ html, body {
     -ms-transition: all 0.5s ease-in-out;
 }
 
+.plist li {
+    text-align: right;
+    float: right;
+}
+
+.wlist li {
+    text-align: left;
+    float: left;
+}
+
 .plist li:hover, .prclicked, .wlist li:hover {
     cursor: pointer;
     color: black;
@@ -373,12 +395,20 @@ html, body {
 }
 
 .pwrapper, .wwrapper {
-    float: right;
-    right: 0;
     position: absolute;
-    width: 79.99vw;
+    width: 79vw;
     height: 70%;
     display: none;
+}
+
+.pwrapper {
+    float: right;
+    right: 0;
+}
+
+.wwrapper {
+    float: left;
+    left: 0;
 }
 
 .project {
@@ -398,12 +428,19 @@ html, body {
 }
 
 .pdesc, .wdesc {
-    float: left;
     width: 34.5%;
     height: 100%;
     font-family: 'IM Fell English', serif;
     color: white;
     text-align: center;
+}
+
+.pdesc {
+    float: left;
+}
+
+.wdesc {
+    float: right;
 }
 
 .imgdiv {
@@ -427,11 +464,123 @@ html, body {
     left: 0;
     right: 0;
     margin: auto;
+    box-shadow: 0 10px 10px black;
+    transform: translateX(-1px);
 }
 
 #contact {
-    height: 200px;
-    background-color: lightgray;
+    background: url(../img/house.JPG) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    position: relative;
+}
+
+#cbottom {
+    height: 60%;
+    width: 100%;
+    background: rgba(223, 223, 225, 0.7);
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+}
+
+#cbottom h1 {
+    letter-spacing: 5px;
+    padding: 1em;
+    position: relative;
+    width: 100%;
+}
+
+#cbottom h1:before {
+    content: "";
+    height: 100%;
+    width: 10%;
+    position: absolute;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+
+#cbottom table {
+    width: 50%;
+    height: 50%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#cbottom table a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+}
+
+#cbottom table a:hover {
+    text-decoration: line-through;
+    color: white;
+}
+
+#bottom {
+    height: 50px;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background: #E2E5E7;
+}
+
+#wrapleft {
+    height: 100%;
+    width: 70%;
+    position: absolute;
+    display: inline-block;
+    margin: auto;
+    padding: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#wrapleft:before {
+    content: "";
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+#wrapright {
+    height: 100%;
+    width: 29%;
+    position: absolute;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    right: 0;
+}
+
+#wrapleft span, #wrapright span {
+    line-height: 50px;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    top: 0;
+    bottom: 0;
 }
 
 /* KEYFRAMES HERE */

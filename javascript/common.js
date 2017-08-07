@@ -20,6 +20,11 @@ $(document).ready(function() {
     var $activep = $pitem.first();
     var $activew = $witem.first();
     
+    // auto scroll to top
+    $('html, body').animate({
+        scrollTop: 0
+    }, 200);
+    
     // so that if the window refreshes in middle of page the user isn't stuck there
     if ($(window).scrollTop() >= $section.height() - $navbar.height()) {
         $('html, body').css("overflow-y", "auto");
