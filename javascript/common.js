@@ -25,11 +25,6 @@ $(document).ready(function() {
         scrollTop: 0
     }, 200);
     
-    // so that if the window refreshes in middle of page the user isn't stuck there
-    if ($(window).scrollTop() >= $section.height() - $navbar.height()) {
-        $('html, body').css("overflow-y", "auto");
-    };
-    
     // click on whatever link on navigation bar
     $navp.click(function() {
         var $offset = "#" + lowercase($(this).text());
@@ -92,10 +87,10 @@ $(document).ready(function() {
         var $nav = $(".navp");
         var $owl = $(".owl img");
         var $me = $("#aleft img");
+        var $about = $("#about")
         
         // if the window has passed the top section's height minus navbar's height
-        if ($(this).scrollTop() > $section.height() - $navbar.height()) {
-            $('html, body').css("overflow-y", "auto");
+        if ($(this).scrollTop() > $about.height()- $navbar.height()) {
             $(".owl").addClass("opacity");
             $nav.addClass("opacity");
             $nav.addClass("color");
