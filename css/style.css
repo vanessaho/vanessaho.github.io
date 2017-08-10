@@ -292,7 +292,7 @@ html, body {
 }
 
 .wrapper {
-    height: 90%;
+    height: 98.5%;
     position: absolute;
     margin: auto;
     top: 0;
@@ -300,6 +300,11 @@ html, body {
     left: 0;
     right: 0;
     opacity: 0;
+}
+
+.wrapper h1 {
+    position: relative;
+    height: 40%;
 }
 
 .third:first-child {
@@ -368,6 +373,7 @@ html, body {
 }
 
 .plist li, .wlist li {
+    position: relative;
     float: right;
     width: 60%;
     vertical-align: middle;
@@ -392,10 +398,43 @@ html, body {
     float: left;
 }
 
-.plist li:hover, .prclicked, .wlist li:hover {
+.prclicked {
+    color: yellow;
+    border-bottom: 1px solid black;
+}
+
+.plist li:hover, .wlist li:hover {
     cursor: pointer;
-    color: black;
-    text-decoration: line-through;
+}
+
+.plist > li:before, .wlist > li:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    visibility: hidden;
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+
+.plist li:hover:before, .wlist li:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    -o-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -moz-transform: scaleX(1);
 }
 
 .pwrapper, .wwrapper {
