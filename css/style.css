@@ -79,7 +79,7 @@ html, body {
 }
 
 .section {
-    height: 110vh;
+    height: 100vh;
     width: 100vw;
     position: relative;
     display: block;
@@ -197,7 +197,6 @@ html, body {
 #aleft {
     float: left;
     position: relative;
-    vertical-align: middle;
     height: 100%;
     width: 40vw;
     overflow: hidden;
@@ -205,7 +204,7 @@ html, body {
 
 #aleft img {
     display: block;
-    position: relative;
+    position: absolute;
     height: 800px;
     width: auto;
     z-index: 2;
@@ -215,36 +214,18 @@ html, body {
     left: 0;
     right: 0;
     box-shadow: 2px 2px 10px black;
-    transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
-}
-
-.rotate5 {
-    transform: scale(1.3);
 }
 
 #aright {
-    float: right;
-    position: absolute;
+    position: relative;
     z-index: 3;
     vertical-align: middle;
     overflow: hidden;
-    background: white;
-    box-shadow: 2px 2px 10px black;
+    background: transparent;
     text-align: center;
-    height: 70%;
-    width: 60vw;
+    height: 100%;
+    width: 55vw;
     margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 30%;
-    padding-left: 3em;
-    padding-right: 3em;
-    padding-top: 1em;
-    padding-bottom: 1em;
 }
 
 #aright h1 {
@@ -254,10 +235,18 @@ html, body {
 }
 
 #aright div {
-    text-align: justify;
+    position: absolute;
+    height: 400px;
+    width: 100%;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 #aright div p {
+    text-align: left;
     padding-bottom: 10px;
     padding-left: 10px;
 }
@@ -266,10 +255,22 @@ html, body {
 
 #skills {
     background: whitesmoke;
+    position: relative;
+    width: 100%;
     background-attachment: fixed;
-    padding: 2em;
     text-align: center;
     overflow: hidden;
+}
+
+.container {
+    position: absolute;
+    margin: auto;
+    height: 90%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .third {
@@ -283,6 +284,7 @@ html, body {
 
 .third ul {
     padding: 2em;
+    text-align: center;
     list-style: none;
 }
 
@@ -292,14 +294,13 @@ html, body {
 }
 
 .wrapper {
-    height: 98.5%;
+    height: 75%;
     position: absolute;
     margin: auto;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    opacity: 0;
 }
 
 .wrapper h1 {
@@ -338,34 +339,53 @@ html, body {
 }
 
 #projects .section h1 {
-    padding: 2em;
+    padding-top: 2em;
     text-align: center;
     color: white;
+    position: relative;
+    margin: 0;
     letter-spacing: 10px;
 }
 
-.pdiv, .wdiv {
-    position: relative;
+#programming:before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    bottom: 0;
+    width: 50vw;
+    background: black;
+    left: 0;
+    right: 0;
     margin: auto;
-    height: 50%;
+}
+
+.quarters {
+    position: absolute;
+    margin: auto;
+    height: 75%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.pdiv, .wdiv {
+    float: left;
+    margin-right: 10px;
+    position: relative;
+    height: 100%;
     width: 20vw;
 }
 
-.pdiv {
-    float: left;
-    margin-right: 10px;
-}
-
-.wdiv {
-    float: right;
-    margin-left: 10px;
-}
-
 .plist,  .wlist{
+    position: absolute;
+    top: 0;
+    bottom: 0;
     height: 70%;
     width: 100%;
     color: white;
-    margin: 0;
+    margin: auto;
     padding: 0;
     list-style: none;
     display: table;
@@ -373,6 +393,8 @@ html, body {
 }
 
 .plist li, .wlist li {
+    text-align: right;
+    float: right;
     position: relative;
     float: right;
     width: 60%;
@@ -386,16 +408,6 @@ html, body {
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -ms-transition: all 0.5s ease-in-out;
-}
-
-.plist li {
-    text-align: right;
-    float: right;
-}
-
-.wlist li {
-    text-align: left;
-    float: left;
 }
 
 .prclicked {
@@ -438,27 +450,21 @@ html, body {
 }
 
 .pwrapper, .wwrapper {
-    position: absolute;
-    width: 79vw;
-    height: 70%;
+    float: right;
+    right: 0;
+    position: relative;
+    width: 75vw;
+    height: 100%;
     display: none;
 }
 
-.pwrapper {
-    float: right;
-    right: 0;
-}
-
-.wwrapper {
-    float: left;
-    left: 0;
-}
-
 .project {
-    height: 100%;
+    height: 50%;
     width: 100%;
-    float: left;
     position: absolute;  
+    top: 0;
+    bottom: 25%;
+    margin: auto;
 }
 
 .project a {
@@ -471,19 +477,12 @@ html, body {
 }
 
 .pdesc, .wdesc {
+    float: left;
     width: 34.5%;
     height: 100%;
     font-family: 'IM Fell English', serif;
     color: white;
     text-align: center;
-}
-
-.pdesc {
-    float: left;
-}
-
-.wdesc {
-    float: right;
 }
 
 .imgdiv {

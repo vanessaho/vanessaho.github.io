@@ -113,10 +113,6 @@ $(document).ready(function() {
                 $(this).animate({'opacity':'1'}, 1000*i);
             }
         });
-        
-        // rotate image after scrolling past #about section
-        if ($(this).scrollTop() >= $about.offset().top - $navbar.height()) {
-            $me.addClass("rotate5");
-        }
+    
     });
 });

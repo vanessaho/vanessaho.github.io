@@ -3,19 +3,19 @@ html, body {
     margin: 0 auto;
     padding: 0;
     overflow-x: hidden;
-    font-size: 10px;
+    font-size: 20px;
 }
 
 /* NAVIGATION BAR */
 #navbar {
-    height: 3vh;
+    height: 5vh;
     width: 100%;
     position: fixed;
     overflow: hidden;
-    text-transform: uppercase;
     background: rgba(255, 255, 255, 0);
     color: white;
     z-index: 9999;
+    letter-spacing: 3px;
     display: table;
     transition: all 0.25s ease-in-out;
     -webkit-transition: all 0.25s ease-in-out;
@@ -80,7 +80,7 @@ html, body {
 }
 
 .section {
-    height: 100vh;
+    height: 80vh;
     width: 100vw;
     position: relative;
     display: block;
@@ -107,8 +107,8 @@ html, body {
 
 #welcome {
     position: relative;
-    font-size: 25px;
-    letter-spacing: 10px;
+    font-size: 60px;
+    letter-spacing: 20px;
     padding-bottom: 10px;
     padding-left: 1em;
     padding-right: 1em;
@@ -193,28 +193,28 @@ html, body {
     background: whitesmoke;
     overflow: hidden;
     background-attachment: fixed;
-    padding: 20px;
 }
 
 #aleft {
     float: left;
     position: relative;
-    overflow: hidden;
-    top: 0;
-    padding: 15px;
     height: 100%;
-    width: 40vh;
+    width: 40vw;
+    overflow: hidden;
 }
 
 #aleft img {
-    border-radius: 100%;
+    display: block;
     position: absolute;
+    height: 800px;
+    width: auto;
+    z-index: 2;
     margin: auto;
-    width: 100%;
-    height: auto;
     top: 0;
     bottom: 0;
-    box-shadow: 0px 0px 0px transparent;
+    left: 0;
+    right: 0;
+    box-shadow: 2px 2px 10px black;
 }
 
 #aright {
@@ -237,7 +237,7 @@ html, body {
 
 #aright div {
     position: absolute;
-    height: 250px;
+    height: 600px;
     width: 100%;
     margin: auto;
     top: 0;
@@ -252,13 +252,14 @@ html, body {
     padding-left: 10px;
 }
 
+
 /* THIRD SECTION SKILLS */
+
 #skills {
     background: whitesmoke;
     position: relative;
     width: 100%;
     background-attachment: fixed;
-    padding: 2em;
     text-align: center;
     overflow: hidden;
 }
@@ -266,7 +267,7 @@ html, body {
 .container {
     position: absolute;
     margin: auto;
-    height: 70%;
+    height: 90%;
     width: 100%;
     top: 0;
     bottom: 0;
@@ -284,36 +285,29 @@ html, body {
 }
 
 .third ul {
-    position: relative;
-    font-size: 10px;
+    padding: 2em;
     text-align: center;
-    list-style-type: none;
+    list-style: none;
 }
 
 .pad li {
+    padding: 10px;
     font-weight: bold;
-    padding-bottom: 10px;
 }
 
 .wrapper {
-    height: 98.5%;
+    height: 75%;
     position: absolute;
     margin: auto;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    opacity: 0;
-}
-
-.wrapper div {
-    position: relative;
-    height: 35%;
 }
 
 .wrapper h1 {
     position: relative;
-    font-size: 15px;
+    height: 40%;
 }
 
 .third:first-child {
@@ -347,11 +341,9 @@ html, body {
 }
 
 #projects .section h1 {
-    padding-top: 2em;
+    padding: 2em;
     text-align: center;
     color: white;
-    position: relative;
-    margin: 0;
     letter-spacing: 10px;
 }
 
@@ -382,7 +374,6 @@ html, body {
     float: left;
     margin-right: 10px;
     position: relative;
-    margin: auto;
     height: 100%;
     width: 20vw;
 }
@@ -402,13 +393,16 @@ html, body {
 }
 
 .plist li, .wlist li {
+    text-align: right;
     float: right;
     position: relative;
-    text-align: right;
+    float: right;
     width: 60%;
     vertical-align: middle;
     padding-top: 2em;
     padding-bottom: 2em;
+    padding-right: 1em;
+    letter-spacing: 5px;
     transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
@@ -456,18 +450,18 @@ html, body {
 }
 
 .pwrapper, .wwrapper {
+    float: right;
+    right: 0;
     position: relative;
-    float: left;
-    margin-right: 10px;
     width: 75vw;
     height: 100%;
     display: none;
 }
 
 .project {
-    height: 100%;
+    height: 50%;
     width: 100%;
-    position: absolute; 
+    position: absolute;  
     top: 0;
     bottom: 0;
     margin: auto;
@@ -484,27 +478,18 @@ html, body {
 
 .pdesc, .wdesc {
     float: left;
-    width: 100%;
-    height: 75%;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 34.5%;
+    height: 100%;
     font-family: 'IM Fell English', serif;
     color: white;
     text-align: center;
-    position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    -webkit-transform: rotateY(-180deg);
-          transform: rotateY(-180deg);
 }
 
 .imgdiv {
-    position: absolute;
-    height: 75%;
-    width: 100%;
+    position: relative;
+    float: right;
+    height: 100%;
+    width: 65%;
     margin: auto;
     left: 0;
     right: 0;
@@ -522,21 +507,6 @@ html, body {
     right: 0;
     margin: auto;
     box-shadow: 0 10px 10px black;
-}
-
-.imgdiv, .pdesc, .wdesc {
-    -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-transition: -webkit-transform 0.3s;
-          transition: transform 0.3s;
-}
-
-.project:hover .imgdiv {
-    transform: rotateY(-180deg);
-}
-
-.project:hover .pdesc, .project:hover .wdesc {
-    transform: rotateY(0);
 }
 
 /* CONTACT PAGE */
@@ -913,3 +883,4 @@ html, body {
         opacity: 1;
     }
 }
+
