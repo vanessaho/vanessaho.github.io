@@ -1,3 +1,8 @@
+// forced scroll to top
+$(document).ready(function() {
+    $(this).scrollTop(0);
+});
+
 //typed.js option
 var options = {
     strings: ["aesthetically pleasing.", "creative and resourceful.", "minimalistic and pretty.", "functional and appealing.", "fun and sophisticated."],
@@ -78,6 +83,26 @@ $cicon.hover(function() {
     $(this).find("i").addClass("transparent");
 })
 
+// check if container element is in view
+var $container = $(".container");
+function in_view() {
+    var scrolled = $(window).scrollTop();
+    var wheight = $(window).outerHeight();
+    var wbottom = wheight + scrolled;
+    
+    $container.each(function() {
+        var $this = $(this);
+        var $theight = $this.outerHeight();
+        var $tscrolled = $this.offset().top;
+        var $tbottom = $theight + $tscrolled;
+        
+        // if container bottom >= window top && container top <= window bottom
+        if (($tbottom >= scrolled) && ($tscrolled <= wbottom)) {
+            $this.addClass("in_view");
+        } 
+    });
+}
+
 // fade in function for nav bar
 var oheight = $("#opening").outerHeight();
 var aheight = $("#about").outerHeight(true);
@@ -93,6 +118,8 @@ $(window).scroll(function() {
     } else {
         $("#nav").fadeOut("fast");
     }
+    
+    in_view();
 });
 
 // getting hours of the day for greeting

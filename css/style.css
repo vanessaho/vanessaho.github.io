@@ -27,6 +27,18 @@ h1 {
     transition: all 0.35s ease-in-out;
 }
 
+.in_view {
+    -webkit-transform: translateY(200px);
+    -ms-transform: translateY(200px);
+    -o-transform: translateY(200px);
+    transform: translateY(200px);
+    animation: inview 0.85s ease-in-out forwards;
+    -o-animation: inview 0.85s ease-in-out forwards;
+    -ms-animation: inview 0.85s ease-in-out forwards;
+    -moz-animation: inview 0.85s ease-in-out forwards;
+    -webkit-animation: inview 0.85s ease-in-out forwards;
+}
+
 .transparent {
     opacity: 0.5;
 }
@@ -941,5 +953,14 @@ h1 {
         -ms-transform: translateY(5px);
         -o-transform: translateY(5px);
         transform: translateY(5px);
+    }
+}
+
+@keyframes inview {
+    to {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
     }
 }
