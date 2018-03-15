@@ -858,6 +858,9 @@ h1 {
         filter: grayscale(0);
     }
     
+    #skill_container h2 {
+        width: 80%;
+    }
     #more div h2 {
         text-align: center;
     }
