@@ -107,6 +107,20 @@ function in_view() {
     });
 }
 
+$container.each(function() {
+    var scrolled = $(window).scrollTop();
+    var wheight = $(window).outerHeight();
+    var wbottom = wheight + scrolled;
+    var $this = $(this);
+    var $theight = $this.outerHeight();
+    var $tscrolled = $this.offset().top;
+    var $tbottom = $theight + $tscrolled;
+    
+    if (($tbottom >= scrolled) && ($tscrolled <= wbottom)) {
+        $this.addClass("remove");
+    } 
+})
+
 // fade in function for nav bar
 var oheight = $("#opening").outerHeight();
 var aheight = $("#about").outerHeight(true);

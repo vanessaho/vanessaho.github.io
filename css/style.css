@@ -39,6 +39,16 @@ h1 {
     -webkit-animation: inview 0.85s ease-in-out forwards;
 }
 
+.remove {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);   
+    -webkit-animation: none;
+    -o-animation: none;
+    animation: none;
+}
+
 .transparent {
     opacity: 0.5;
 }
