@@ -81,6 +81,12 @@ $cicon.hover(function() {
     $(this).find("i").addClass("transparent");
 })
 
+$contact.hover(function() {
+    $(this).find("h1 i").removeClass("transparent");
+}, function() {
+    $(this).find("h1 i").addClass("transparent");
+})
+
 // check if container element is in view
 var $container = $(".container");
 function in_view() {
