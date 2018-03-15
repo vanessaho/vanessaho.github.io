@@ -854,8 +854,16 @@ h1 {
         filter: grayscale(0);
     }
     
+    #more div h2 {
+        text-align: center;
+    }
+    
     #mini_ #more {
         flex-direction: column;
+    }
+    
+    #more div:last-child {
+        margin: 0;
     }
 }
 
@@ -893,8 +901,8 @@ h1 {
         width: 33%;
     }
     
-    #more div:last-child {
-        margin: 0;
+    #mini_ div {
+        flex-direction: column;
     }
 }
 
