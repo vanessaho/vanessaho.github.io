@@ -7,7 +7,7 @@ var options = {
     // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
     stringsElement: null,
     // typing speed
-    typeSpeed: 30,
+    typeSpeed: 20,
     // time before typing starts
     startDelay: 1200,
     // backspacing speed
