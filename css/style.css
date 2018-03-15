@@ -811,7 +811,7 @@ h1 {
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
     #opening {
-        background: linear-gradient(to right, rgba(20, 30, 48, 0.8), rgba(36, 59, 85, .6)), url("../img/rsz_nyc.jpg") center fixed;
+        background: linear-gradient(to right, rgba(20, 30, 48, 0.8), rgba(36, 59, 85, .6)), url("../img/rsz2_nyc.jpg") center fixed;
     }
     
     * {
