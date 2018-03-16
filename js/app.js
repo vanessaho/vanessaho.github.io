@@ -146,7 +146,7 @@ $(window).scroll(function() {
     /* if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
         difference = 0;
     }*/
-    if ($(window).scrollTop() >= (oheight - difference)) {
+    if ($(window).scrollTop() >= (oheight - $("#nav").height() - 10)) {
         $("#nav").fadeIn("slow");
     } else {
         $("#nav").fadeOut("fast");
@@ -173,7 +173,7 @@ if (time >= 0 && time < 6) {
 // scrolling function for clicking
 $('a[href^="#"]').on('click', function(event) {
     var target = $(this.getAttribute('href'));
-    var difference = ($(window).outerWidth() < 900)? 30: 50;
+    //var difference = ($(window).outerWidth() < 900)? 30: 50;
 
     /*if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1 && $(this).attr('href') == '#about') {
         difference = 0;
@@ -182,7 +182,7 @@ $('a[href^="#"]').on('click', function(event) {
     if( target.length ) {
         event.preventDefault();
         $('html, body').stop().animate({
-            scrollTop: target.offset().top - difference
+            scrollTop: target.offset().top - $("#nav").height()
         }, 1000);
     }
 
