@@ -10,6 +10,7 @@
 
 #opening, #about, #skills, #projects, #contact {
     width: 100%;
+    overflow: hidden;
 }
 
 a {
@@ -653,7 +654,6 @@ h1 {
     -webkit-background-size: cover;
     -ms-background-size: cover;
     -moz-background-size: cover;
-    overflow: hidden;
 }
 
 #cont_container {
