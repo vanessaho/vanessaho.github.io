@@ -142,11 +142,11 @@ var cheight = $("#contact").outerHeight(true);
 
 $(window).scroll(function() {
     var scrolled = $(window).scrollTop();
-    var difference = ($(window).outerWidth() < 1000)? 30: 60;
-    if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+    var difference = ($(window).outerWidth() < 900)? 30: 60;
+    /* if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
         difference = 0;
-    }
-    if ($(window).scrollTop() > (oheight - difference)) {
+    }*/
+    if ($(window).scrollTop() >= (oheight - difference)) {
         $("#nav").fadeIn("slow");
     } else {
         $("#nav").fadeOut("fast");
@@ -173,8 +173,12 @@ if (time >= 0 && time < 6) {
 // scrolling function for clicking
 $('a[href^="#"]').on('click', function(event) {
     var target = $(this.getAttribute('href'));
-    var difference = ($(window).outerWidth() < 1000)? 30: 50;
+    var difference = ($(window).outerWidth() < 900)? 30: 50;
 
+    if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1 && $(this).attr('href') == '#about') {
+        difference = 0;
+    };
+    
     if( target.length ) {
         event.preventDefault();
         $('html, body').stop().animate({
