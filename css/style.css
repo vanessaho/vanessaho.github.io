@@ -634,12 +634,14 @@ h1 {
 #contact {
     position: relative;
     width: 100%;
+    min-height: 100vh;
     background: linear-gradient(to left, rgba(20, 30, 48, 0.9), rgba(36, 59, 85, .2)), url("/img/airplane.jpg") center fixed;
     background-size: cover;
     -o-background-size: cover;
     -webkit-background-size: cover;
     -ms-background-size: cover;
     -moz-background-size: cover;
+    overflow: hidden;
 }
 
 #cont_container {
@@ -932,6 +934,11 @@ h1 {
     
     #projects .h_container h1 {
         width: 33%;
+    }
+    
+    #contact {
+        margin: 0;
+        padding: 0;
     }
     
     #mini_ div {

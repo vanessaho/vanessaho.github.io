@@ -142,6 +142,9 @@ var cheight = $("#contact").outerHeight(true);
 $(window).scroll(function() {
     var scrolled = $(window).scrollTop();
     var difference = ($(window).outerWidth() < 1000)? 30: 60;
+    if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+        difference = 0;
+    }
     if ($(window).scrollTop() > (oheight - difference)) {
         $("#nav").fadeIn("slow");
     } else {
