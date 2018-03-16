@@ -339,7 +339,7 @@ h1 {
 }
 
 #about:hover h1, #projects:hover h1 {
-    text-shadow: 0 0 5px #0B3C5D;
+    text-shadow: 0 0 4px #0B3C5D;
 }
 
 #about h1, #projects h1 {
