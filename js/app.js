@@ -34,9 +34,9 @@ var typed = new Typed(".typed", options);
 // safari gives me a lot of issues
 if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
     if ($(window).outerWidth() >= 992) {
-        $("#opening").css("linear-gradient(to bottom, rgba(20, 30, 48, 0.9), rgba(36, 59, 85, .2)), url('/img/rsz2_nyc.png') center");
+        $("#opening").css("linear-gradient(to bottom, rgba(20, 30, 48, 0.8), rgba(36, 59, 85, .2)), url('/img/rsz2_nyc.png') center");
     } else {
-        $("#opening").css("background", "linear-gradient(to bottom, rgba(20, 30, 48, 0.8), rgba(36, 59, 85, .6)), url('../img/rsz3_nyc.png') center");
+        $("#opening").css("background", "linear-gradient(to bottom, rgba(20, 30, 48, 0.8), rgba(36, 59, 85, .2)), url('../img/rsz3_nyc.png') center");
     }
     
     $("#contact").css("background", "linear-gradient(to bottom, rgba(11, 60, 93, 1), rgba(36, 59, 85, .4)), url('/img/rsz_japan.jpg') center");
