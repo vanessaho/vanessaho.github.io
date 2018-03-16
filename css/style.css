@@ -169,6 +169,8 @@ h1 {
 }
 
 #opening {
+    background-color: rgba(20, 30, 48, 1);
+    background-image: linear-gradient(to bottom, rgba(20, 30, 48, 0.8), rgba(36, 59, 85, .6));
     background: linear-gradient(to bottom, rgba(20, 30, 48, 0.8), rgba(36, 59, 85, .6)), url("../img/rsz2_nyc.jpg") center fixed;
     background-size: cover;
     -o-background-size: cover;
@@ -643,7 +645,9 @@ h1 {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(to bottom, rgba(11, 60, 93, 1), rgba(36, 59, 85, .2)), url("/img/rsz_japan.jpg") center fixed;
+    background-color: rgba(11, 60, 93, 1);
+    background-image: linear-gradient(to bottom, rgba(11, 60, 93, 1), rgba(36, 59, 85, .4));
+    background: linear-gradient(to bottom, rgba(11, 60, 93, 1), rgba(36, 59, 85, .4)), url("/img/japan.jpg") center fixed;
     background-size: cover;
     -o-background-size: cover;
     -webkit-background-size: cover;
@@ -836,7 +840,7 @@ h1 {
     }
     
     #contact {
-        background: linear-gradient(to bottom, rgba(11, 60, 93, 1), rgba(36, 59, 85, .2)), url("/img/rsz2_japan.jpg") center fixed;
+        background: linear-gradient(to bottom, rgba(11, 60, 93, 1), rgba(36, 59, 85, .4)), url("/img/rsz_japan.jpg") center fixed;
     }
     
     * {
@@ -923,7 +927,7 @@ h1 {
         margin-right: 2em;
     }
     
-    #opening {
+    #opening, #contact {
         background-attachment: scroll;
         background-repeat: no-repeat;
     }
@@ -946,11 +950,6 @@ h1 {
     
     #projects .h_container h1 {
         width: 33%;
-    }
-    
-    #contact {
-        margin: 0;
-        padding: 0;
     }
     
     #mini_ div {
