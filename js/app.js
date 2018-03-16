@@ -32,7 +32,13 @@ var typed = new Typed(".typed", options);
 
 // safari gives me a lot of issues
 if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
-    $("#opening").css("background", "linear-gradient(to right, rgba(20, 30, 48, 0.8), rgba(36, 59, 85, .6)), url('../img/rsz2_nyc.png')");
+    if ($(window).outerWidth() >= 992) {
+        $("#opening").css("background", "linear-gradient(to right, rgba(20, 30, 48, 0.8), rgba(36, 59, 85, .6)), url('../img/rsz2_nyc.png') center");
+    } else {
+        $("#opening").css("background", "linear-gradient(to right, rgba(20, 30, 48, 0.8), rgba(36, 59, 85, .6)), url('../img/rsz3_nyc.png') center");
+    }
+    
+    $("#contact").css("linear-gradient(to left, rgba(20, 30, 48, 0.9), rgba(36, 59, 85, .2)), url('/img/airplane.png') center");
 }
 
 // navbar hovor function
