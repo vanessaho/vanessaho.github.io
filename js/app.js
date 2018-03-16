@@ -30,6 +30,11 @@ var options = {
 
 var typed = new Typed(".typed", options);
 
+// safari gives me a lot of issues
+if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+    $("#opening").css("background", "linear-gradient(to right, rgba(20, 30, 48, 0.8), rgba(36, 59, 85, .6)), url('../img/rsz2_nyc.png')");
+}
+
 // navbar hovor function
 var $nava = $("#nav ul li a");
 $("#nav").hover(function() {

@@ -909,6 +909,11 @@ h1 {
         margin-right: 2em;
     }
     
+    #opening {
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+    }
+    
     #o_container {
         width: 250px;
     }
