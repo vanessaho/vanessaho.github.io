@@ -10,7 +10,6 @@
 
 #opening, #about, #skills, #projects, #contact {
     width: 100%;
-    overflow: hidden;
 }
 
 a {
@@ -322,11 +321,11 @@ h1 {
     width: 1200px;
     max-width: 90%;
     min-height: 100vh;
-    -webkit-flex: 1;
-    -moz-flex: 1;
-    -ms-flex: 1;
-    -o-flex: 1;
-    flex: 1;
+    -webkit-flex: 1 1 auto;
+    -moz-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    -o-flex: 1 1 auto;
+    flex: 1 1 auto;
     display: block;
     display: flex;
     flex-wrap: wrap;
@@ -400,6 +399,7 @@ h1 {
 }
 
 #hashparas {
+    width: 100%;
     position: relative;
     display: block;
     display: flex;
@@ -409,7 +409,11 @@ h1 {
 
 #about .hashpara {
     padding-bottom: 1em;
-    flex: 1;
+    -webkit-flex: 1 1 auto;
+    -moz-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    -o-flex: 1 1 auto;
+    flex: 1 1 auto;
     width: 100%;
     display: block;
 }
@@ -544,11 +548,11 @@ h1 {
 .proj div:last-child p {
     width: 50%;
     padding: 1.25em;
-    -webkit-flex: 1;
-    -moz-flex: 1;
-    -ms-flex: 1;
-    -o-flex: 1;
-    flex: 1;
+    -webkit-flex: 1 1 auto;
+    -moz-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    -o-flex: 1 1 auto;
+    flex: 1 1 auto;
     line-height: 1.2;
 }
 
@@ -577,11 +581,11 @@ h1 {
     color: #0B3C5D;
     position: relative;
     display: flex;
-    -webkit-flex: 1;
-    -moz-flex: 1;
-    -ms-flex: 1;
-    -o-flex: 1;
-    flex: 1;
+    -webkit-flex: 1 1 auto;
+    -moz-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    -o-flex: 1 1 auto;
+    flex: 1 1 auto;
     flex-direction: column;
     padding: 1em;
     margin: 1em;
@@ -646,6 +650,7 @@ h1 {
 }
 
 #contact {
+    overflow: hidden;
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -680,11 +685,11 @@ h1 {
 }
 
 #mini_ div {
-    -webkit-flex: 1;
-    -moz-flex: 1;
-    -ms-flex: 1;
-    -o-flex: 1;
-    flex: 1;
+    -webkit-flex: 1 1 auto;
+    -moz-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    -o-flex: 1 1 auto;
+    flex: 1 1 auto;
     padding: 1em;
     display: flex;
     position: relative;
@@ -743,11 +748,11 @@ h1 {
 }
 
 #more div {
-    -webkit-flex: 1;
-    -moz-flex: 1;
-    -ms-flex: 1;
-    -o-flex: 1;
-    flex: 1;
+    -webkit-flex: 1 1 auto;
+    -moz-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    -o-flex: 1 1 auto;
+    flex: 1 1 auto;
     display: block;
     display: flex;
     flex-wrap: wrap;
