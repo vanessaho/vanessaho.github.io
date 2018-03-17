@@ -321,6 +321,7 @@ h1 {
     width: 1200px;
     max-width: 90%;
     min-height: 100vh;
+    overflow: hidden;
     -webkit-flex: 1 1 auto;
     -moz-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
@@ -745,18 +746,23 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-}
-
-#more div {
     -webkit-flex: 1 1 auto;
     -moz-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     -o-flex: 1 1 auto;
     flex: 1 1 auto;
+}
+
+#more div {
+    -webkit-flex: 1 1 0;
+    -moz-flex: 1 1 0;
+    -ms-flex: 1 1 0;
+    -o-flex: 1 1 0;
+    flex: 1 1 0;
     display: block;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 #more div h2 {
@@ -919,6 +925,14 @@ h1 {
     
     #more div:last-child {
         margin: 0;
+    }
+    
+    #more div {
+        -webkit-flex: 1 1 auto;
+        -moz-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        -o-flex: 1 1 auto;
+        flex: 1 1 auto;
     }
 }
 
