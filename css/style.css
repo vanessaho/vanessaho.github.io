@@ -759,7 +759,7 @@ h1 {
     -moz-flex: 1 1 0;
     -ms-flex: 1 1 0;
     -o-flex: 1 1 0;
-    flex: 1 1 auto;
+    flex: 1 1 0;
     display: block;
     display: flex;
     flex-wrap: wrap;

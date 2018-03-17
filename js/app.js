@@ -31,7 +31,12 @@ var options = {
 
 var typed = new Typed(".typed", options);
 
-// safari gives me a lot of issues
+// IE and safari give me a lot of issues
+if (/MSIE 10/i.test(navigator.userAgent) || /MSIE 9/i.test(navigator.userAgent) || /rv:11.0/i.test(navigator.userAgent)) {
+   // This is internet explorer 10
+   $("#projs").css("display", "block");
+}
+
 if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
     if ($(window).outerWidth() >= 992) {
         $("#opening").css("linear-gradient(to bottom, rgba(20, 30, 48, 0.8), rgba(36, 59, 85, .2)), url('/img/rsz2_nyc.png') center");
