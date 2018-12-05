@@ -141,7 +141,6 @@ h1 {
     position: relative;
     text-align: center;
     vertical-align: middle;
-    height: 50px;
     line-height: 50px;
     color: #F4F4F4;
 }
@@ -334,6 +333,25 @@ h1 {
     flex-direction: column;
     position: relative;
     margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#projs .full-width {
+    width: 100%;
 }
 
 #proj_container, #skill_container {
@@ -483,16 +501,16 @@ h1 {
     filter: grayscale(0);
 }
 
-.proj div:first-child, .proj div:last-child {
-    position: relative;
-    display: flex;
-    width: 100%;
-}
-
 .proj div:first-child {
     padding: 10px;
     display: block;
     border-bottom: 1px dashed rgba(11, 60, 93, 0.5);
+}
+
+.proj div:first-child, .proj div:last-child {
+    position: relative;
+    display: flex;
+    width: 100%;
 }
 
 .proj h2 {
@@ -501,7 +519,12 @@ h1 {
     padding-right: 1.25em;
     border-right: 1px dashed rgba(11, 60, 93, 0.5);
     display: inline-block;
+    display: flex;
     opacity: 0.75;
+}
+
+.proj div .work-title {
+    position: absolute;
 }
 
 .proj div:first-child p {
@@ -513,10 +536,9 @@ h1 {
 .proj .img_container {
     position: relative;
     text-decoration: none;
-    width: 50%;
+    width: 100%;
     overflow: hidden;
     padding: 1.25em;
-    border-right: 1px dashed rgba(11, 60, 93, 0.5);
 }
 
 .img_container img {
@@ -549,7 +571,7 @@ h1 {
 }
 
 .proj div:last-child p {
-    width: 50%;
+    width: 100%;
     padding: 1.25em;
     -webkit-flex: 1 1 auto;
     -moz-flex: 1 1 auto;
@@ -670,6 +692,12 @@ h1 {
 #cont_container {
     text-align: center;
     color: #F4F4F4;
+}
+
+#cont_container #hurray {
+    background-color: transparent;
+    display: inline-block;
+    width: 100%;
 }
 
 #cont_container h2 {
@@ -849,6 +877,11 @@ h1 {
         height: 30px;
         line-height: 30px;
     }
+
+
+    .flex-row {
+        flex-direction: column;
+    }
 }
 
 /* Small Devices, Tablets */
@@ -908,6 +941,12 @@ h1 {
     .hashpara p {
         width: 60%;
     }
+
+    .proj div .work-title {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
     
     .img_container img {
         -webkit-filter: grayscale(0);
@@ -918,6 +957,7 @@ h1 {
     #skill_container h2 {
         width: 80%;
     }
+
     #more div h2 {
         text-align: center;
     }
@@ -994,7 +1034,7 @@ h1 {
     100% {
         -webkit-transform: translateY(-10px);
         -ms-transform: translateY(-10px);
-        -o-transform: translateY-10px);
+        -o-transform: translateY(-10px);
         transform: translateY(-10px);
     }
 }
