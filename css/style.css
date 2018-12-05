@@ -351,6 +351,7 @@ h1 {
 }
 
 #projs .full-width {
+    margin-top: 2em;
     width: 100%;
 }
 
